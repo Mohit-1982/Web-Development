@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="outer-div">
+        <h1 id="attempts">BEST OF FIVE</h1>
+
+        <div class="inner-div"><!-- inner-div starts -->
+
+            <button class="elements-button">
+                <img class="images" id="rock" src="ImagesForRPS/RockImage.png" alt="rock-image">
+                <h1>Rock</h1>
+            </button>
+
+            <button class="elements-button">
+                <img class="images" id="paper" src="ImagesForRPS/PaperImage.png" alt="paper-image">
+                <h1>Paper</h1>
+            </button>
+            
+            <button class="elements-button">
+                <img class="images" id="scissor" src="ImagesForRPS/ScissorImage.png" alt="scissor">
+                <h1>Scissor</h1>
+            </button>
+        </div><!-- inner-div ends -->
+        
+        <form id="form" action="#">
+            <input class="user-input" type="text" placeholder="Enter Player Name">
+        </form>
+
+        <div class="player-choose">
+            <p id="player">Player choose : none</p>
+            <p id="bot">Bot choose : none</p>
+            <p id="result">--- Won</p>
+        </div>
+
+        <div class="score-div">
+
+            <div class="player-win-count">
+                <p id="player-name">Player Name</p>
+                <p id="player-win">0</p>
+            </div>
+
+            <div class="bot-win-count">
+                <p id="player-name">Bot</p>
+                <p id="bot-win">0</p>
+            </div>
+        </div>
+
+        <div class="game-result">
+            <p>Player Won</p>
+        </div>
+    </div>
+
+</body>
+</html>

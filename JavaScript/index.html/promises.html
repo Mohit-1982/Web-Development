@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+</body>
+
+<script>
+    const promise = new Promise((resolve, reject) => {
+        const success = true;
+        console.log('make a promise with man');
+
+        if (success) resolve('man fulfilled his promise');
+        else reject('man did not fulfilled his promise');
+    });
+
+    promise.then((value) => {
+        console.log(value);
+        console.log('promise received');
+    });
+
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Mohit');
+        }, 2000);
+        resolve('mohit in resolve');
+    }).then((value) => {
+        console.log('then');
+        console.log(value);
+    });
+
+    const promiseThree = new Promise((resolve, reject) => {
+        resolve({name: 'mohit', age: '17', age: '18'});
+    });
+
+    promiseThree.then((value) => {
+        console.log(value);
+    });
+
+    const promiseFour = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let error = true;
+
+            if (!error) {
+                resolve({name: 'mohit', gmail: 'mohit@1234', password: '12345'});
+            } else {
+                reject('ERROR: Something went wrong');
+            }
+        }, 1000);
+    });
+
+    promiseFour
+    .then((value) => {
+        console.log(value);
+        return value.name;
+    })
+    .then((name) => {
+        console.log(name);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+    .finally(() => console.log('promise is resolved'));
+
+    const promiseFive = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let error = true;
+
+            if (!error) {
+                resolve({name: 'js', gmail: 'js@1234', password: '43252'});
+            } else {
+                reject('ERROR: JS went wrong');
+            }
+        }, 1000);
+    });
+
+    async function consumePromiseFive(data) {
+        try {
+            const userData = await promiseFive;
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    consumePromiseFive();
+</script>
+</html>

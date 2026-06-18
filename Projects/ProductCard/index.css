@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.outer-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-div {
+    /* width: 52%; */
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    height: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.297);
+    border-radius: 15px;
+}
+
+.image-div {
+    position: relative;
+}
+
+.shoe {
+    width: 100%;
+    height: 52%;
+    object-fit: cover;
+}
+
+#fav-tag {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+}
+
+.shoe-colors {
+    width: 100%;
+    height: 10%;
+    margin-top: 0.2rem;
+} 
+
+.shoe-diff {
+    width: 16%;
+    object-fit: cover;
+    margin-left: 4px;
+    border: 2px solid transparent;
+} 
+
+.shoe-diff:hover {
+    border: 2px solid #c59a77; 
+}
+
+#shoe-name {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+#women-shoes {
+    font-size: 0.5rem;
+    margin-left: 0.6rem;
+    text-decoration: none;
+    color:#a1a4b3;
+}
+
+.price-section {
+    display: flex;
+    height: 5%;
+    gap: 6px;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+#normal-price {
+    color: #91969a;
+    text-decoration: line-through;
+}
+
+.add-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    margin-left: 0.6rem;
+    margin-bottom: 0.6rem;
+    padding: 9px 2px;
+    background-color:#1e293c;
+    color: white;
+    font-size: 0.6rem;
+}
+
+#cart-logo {
+    margin-right: 0.4rem;
+}
+
+@media (max-width: 720px) {
+    .inner-div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shoe-diff {
+        width: 15%;
+    }
+}

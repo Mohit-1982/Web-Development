@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #212121;
+}
+
+.outer-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#attempts {
+    font-size: 4rem;
+    margin-bottom: 0.3rem;
+}
+
+.inner-div {
+    display: flex;
+    align-items: start;
+    justify-content: center; 
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.elements-button {
+    width: 12%;
+    background-color: transparent;
+    border: none;
+    color: rgb(179, 179, 179);
+}
+
+.images {
+    width: 100%;
+    object-fit: cover;  
+    border-radius: 50%;
+    padding-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.images:hover {
+    cursor: pointer;
+}
+
+.images:active {    
+    transform: scale(0.95);
+}
+
+#form {
+    display: flex;
+    margin-top: 5rem
+}
+
+.user-input {
+    border: none;
+    border-radius: 5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.user-input::placeholder {
+    color: rgb(117, 117, 117);
+}
+
+.player-choose {
+    display: none;
+    font-size: 1.7rem;
+}
+
+.player-choose p {
+    margin-bottom: 0.5rem;
+}
+
+.score-div {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.player-win-count, .bot-win-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-result {
+    display: none;
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        button {
+            background-color: transparent;
+            font-size: 2rem;
+            border: none;
+            color: white;
+        } 
+    </style>
+</head>
+<body>
+    <button>Click me</button>
+</body>
+
+<script>
+    const ele = document.querySelector('button');
+
+    const moveX = function() {
+        const res = Math.floor(Math.random() * 1200 + 1);
+        console.log(res);
+        return res;
+    };
+
+    const moveY = function() {
+        const res = Math.floor(Math.random() * 550 + 1);
+        console.log(res);
+        return res;
+    }
+
+    ele.addEventListener('mouseenter', (e) => {
+        console.log(strX, strY);
+        ele.style.transform = `translate(${moveX()}px, ${moveY()}px)`;
+        console.log('entered');
+    });
+</script>
+</html>
