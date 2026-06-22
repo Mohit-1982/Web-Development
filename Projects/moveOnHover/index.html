@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        button {
-            background-color: transparent;
-            font-size: 2rem;
-            border: none;
-            color: white;
-        } 
-    </style>
 </head>
 <body>
     <button>Click me</button>
@@ -22,21 +14,30 @@
     const ele = document.querySelector('button');
 
     const moveX = function() {
-        const res = Math.floor(Math.random() * 1200 + 1);
-        console.log(res);
-        return res;
+        let width = window.innerWidth - ele.offsetWidth;
+        return Math.floor(Math.random() * width + 1);
     };
 
     const moveY = function() {
-        const res = Math.floor(Math.random() * 550 + 1);
-        console.log(res);
-        return res;
+        let height = window.innerHeight - ele.offsetHeight;
+        return Math.floor(Math.random() * height + 1);
     }
 
     ele.addEventListener('mouseenter', (e) => {
-        console.log(strX, strY);
         ele.style.transform = `translate(${moveX()}px, ${moveY()}px)`;
-        console.log('entered');
+        ele.style.color = getColor();
     });
+
+    function getColor() {
+        const hex = '0123456789ABCDEF';
+        let hexCode = '#';
+
+        for (let i = 0; i < 6; i++) {
+            let random = Math.floor(Math.random() * 16);
+            hexCode += hex[random];
+        }
+
+        return hexCode;
+    }
 </script>
 </html>

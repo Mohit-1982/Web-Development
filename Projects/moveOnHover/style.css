@@ -10,3 +10,10 @@ html, body {
     background-color: #212121;
     color: white;
 }
+
+button {
+    background-color: transparent;
+    font-size: 2rem;
+    border: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+} 
