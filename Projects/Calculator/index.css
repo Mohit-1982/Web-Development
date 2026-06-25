@@ -9,6 +9,7 @@
 html, body {
     height: 100%;
     width: 100%;
+    background-color: #111111;
     scroll-behavior: smooth;
 }
 
@@ -20,7 +21,7 @@ html, body {
 }
 
 .inner-div {
-    width: clamp(280px, 90vw, 320px);
+    width: clamp(280px, 95vw, 320px);
     height: 620px;
     background-color: black;
     display: flex;
@@ -34,7 +35,7 @@ html, body {
     align-items: flex-end;
     justify-content: flex-end;
     padding: 1rem;
-    font-size: 3.5rem;
+    font-size: 2.7rem;
 }
 
 .button-portion {
@@ -72,4 +73,13 @@ button:active {
 
 .b3 {
     background-color:#333333;
+}
+
+.result-div {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.result-div::-webkit-scrollbar {
+    display: none;
 }

@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button>Click me</button>
+    <main>
+        <button>Click me</button>
+        <div class="score-div">
+            <span id="score">Score: 0</span>
+        </div>
+    </main>
 </body>
 
 <script>
+    let score = 0;
     const ele = document.querySelector('button');
+    const scoreSpan = document.querySelector('#score');
 
     const moveX = function() {
         let width = window.innerWidth - ele.offsetWidth;
@@ -23,10 +30,19 @@
         return Math.floor(Math.random() * height + 1);
     }
 
-    ele.addEventListener('mouseenter', (e) => {
+    function moveButton() {
         ele.style.transform = `translate(${moveX()}px, ${moveY()}px)`;
         ele.style.color = getColor();
-    });
+    }
+
+    ele.addEventListener('click', increaseScore);
+
+    function increaseScore() {
+        score++;
+        scoreSpan.textContent = `Score: ${score}`;
+    }
+
+    ele.addEventListener('pointerenter', moveButton);
 
     function getColor() {
         const hex = '0123456789ABCDEF';

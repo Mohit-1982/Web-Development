@@ -17,3 +17,9 @@ button {
     border: none;
     transition: transform 0.2s ease, color 0.2s ease;
 } 
+
+.score-div {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
