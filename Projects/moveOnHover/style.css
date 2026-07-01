@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: #212121;
@@ -16,7 +17,7 @@ button {
     font-size: 2rem;
     border: none;
     transition: transform 0.2s ease, color 0.2s ease;
-} 
+}
 
 .score-div {
     font-size: 2rem;

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <button>Click me</button>
@@ -20,12 +22,12 @@
     const ele = document.querySelector('button');
     const scoreSpan = document.querySelector('#score');
 
-    const moveX = function() {
+    const moveX = function () {
         let width = window.innerWidth - ele.offsetWidth;
         return Math.floor(Math.random() * width + 1);
     };
 
-    const moveY = function() {
+    const moveY = function () {
         let height = window.innerHeight - ele.offsetHeight;
         return Math.floor(Math.random() * height + 1);
     }
@@ -56,4 +58,5 @@
         return hexCode;
     }
 </script>
+
 </html>
