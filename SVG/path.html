@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <svg width="300" height="300" style="border: 2px solid black;">
+        <!-- <path d="M60,80 L180,80 L180,140 L60,140 Z"
+             fill="Blue" stroke="red" stroke-width="4px" /> -->
+            <!-- <path d="M60,80 H180 V140 H60 Z"
+             fill="Blue" stroke="red" stroke-width="4px" /> -->
+
+            <!-- <path d="M20,100 C20,20 190,20 200,100"
+                 fill="" stroke="red" stroke-width="5px" /> -->
+
+                 <!-- <path d="M20,140 C80,20 140,80 160,140 S260,180 280,140"
+                 fill="" stroke="red" stroke-width="5px" /> -->
+
+            <!-- <path d="M60,140 Q140,60 220,140"
+                 fill="" stroke="" stroke-width="" /> -->
+
+                 <!-- <path d="M60,140 Q140,60 160,140 T260,140"
+                 fill="" stroke="" stroke-width="" /> -->
+
+                <path d="M40,140 A30,40 0 0 1 240,140"
+                     fill="red" stroke="black" stroke-width="5px" /> 
+    </svg>
+
+    <!-- 
+        in path tag we have to write all the code inside "d"
+        M ==> move to ==> it is the starting point of our image
+            M60,80 this is the starting point of our drawing
+        L ==> line to ==> it is use to draw a straight line 
+            just give coordinates x,y like this L100,100 
+        H ==> Horizontal line ==> it creates a line on horizontal axis eg = H180 
+        V ==> Vertical line ==> it creates a line on vertical axis eg = V300
+        Z ==> Close path ==> it connects the current point to the starting point  
+        C ==> cubic bezeir curve ==> it is use to create curves 
+            format: Mx,y Cx1,y1 x2,y2 Ending points(x3,y3)
+        S ==> Smooth cubic bezeir ==> Automatically calculates the first control point from the previous curve.
+        it won't work if we just use S for this first we have to use C
+        format: Mx,y Cx1,y1 x2,y2 Ending points(x3,y3) Sx4,y4 x5,x6
+        Q ==> Quadratic Bezeir ==> same as C just uses 1 control point 
+        format: M.. Qx,y Ending point
+        T ==> Smooth Quadratic ==> it continues Quadratic curve smoothly 
+        format: M.. Qx,y Ending point Tx,y 
+        here, T x,y is the ending point it will create the curve automatically
+        A ==> Arc tag ==> use to create a arc 
+        format: M.. A rx ry rotation largeArcFlag sweepFlag Ending points
+        eg == M 100 100 A50,50 0 0 1 200 100
+        rx,ry => radius (ellipse radius)
+        rotation => rotate the arc to some degree
+        largeArcFlag => if arc is small it makes it large
+                        0 - smaller 1 - larger
+        sweepFlag => 0 - opposite direction me bnegi arc
+                     1 - upar wali direction me bnegi arc
+
+
+        we can use both uppercase and lowercase these things of all the things L M Z etc we can use l m z like this as well the only difference is,
+         uppercase ==> absolute coordinates means they will be measures from svg origin(0,0)
+         lowercse ==> relative coordinates means they will be measure from the current point
+         better to use uppercase
+    -->
+</body>
+</html>
