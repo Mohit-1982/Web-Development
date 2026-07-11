@@ -1,0 +1,17 @@
+npm i motion
+import {motion, useScroll} from 'motion/react'
+
+<motion.div></motion.div> --> to access animations and transition in this 
+
+<motion.div
+    drag
+    dragConstraints={{}}
+    whileDrag={{}}
+    whileHover={{}}
+    whileTap={{}}
+    initial={{}}
+    animation={{}}
+    transition={{}}
+
+>
+</motion.div>
