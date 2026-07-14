@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #212121;
+    color: white;
+}
+
+button {
+    background-color: transparent;
+    font-size: 2rem;
+    border: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.score-div {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}

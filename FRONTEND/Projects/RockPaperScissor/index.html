@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Use scemantic tags -->
+
+    <div class="outer-div">
+
+        <h1 id="attempts">ROCK PAPER SCISSORS</h1>
+
+        <div class="inner-div">
+
+            <button class="elements-button" id="Rock">
+                <img class="images" id="rock" src="ImagesForRPS/RockImage.png" alt="rock-image">
+                <!-- use span or para instead of h1 here -->
+                <h1>Rock</h1>
+            </button>
+
+            <button class="elements-button" id="Paper">
+                <!-- use data- to access in js using .dataset -->
+                <img class="images" id="paper" src="ImagesForRPS/PaperImage.png" alt="paper-image">
+                <h1>Paper</h1>
+            </button>
+
+            <button class="elements-button" id="Scissor">
+                <img class="images" id="scissor" src="ImagesForRPS/ScissorImage.png" alt="scissor-image">
+                <h1>Scissor</h1>
+            </button>
+
+        </div>
+
+        <div class="playerChoose">
+
+            <p id="pC">Player Choose : ---</p>
+            <p id="bC">Bot Choose : ---</p>
+
+        </div>
+
+        <div class="score-div">
+
+            <div class="player-win-count">
+                <p id="player-name">Player</p>
+                <p id="player-win">0</p>
+            </div>
+
+            <div class="bot-win-count">
+                <p id="bot-name">Bot</p>
+                <p id="bot-win">0</p>
+            </div>
+
+        </div>
+
+        <div class="game-end">
+
+        </div>
+
+    </div>
+
+</body>
+</html>

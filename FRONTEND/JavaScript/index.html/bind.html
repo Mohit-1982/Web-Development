@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white ">
+    <button>Button Clicked</button>
+</body>
+
+<script>
+    let pi = Math.PI;
+    let change = pi;
+    console.log(change);
+    console.log(pi);
+    console.log(Math.ceil(change));
+
+    const user = {
+        name: 'mohit',
+        age: 18,
+        gmail: 'mohityadav25csu.gmail.com',
+        password: '1324254235'
+    };
+
+    console.log(Object.getOwnPropertyDescriptor(user, 'name'));
+
+    Object.defineProperty(user, 'password', {
+        value: this.password,
+        enumerable: false
+    });
+
+    for (let [key, pair] of Object.entries(user)) {
+        console.log(`${key} : ${pair}`);
+    }
+
+    class User {
+        constructor(username) {
+            this.username = username;
+        }
+
+        get username() {
+            return this._username;
+        }
+
+        set username(value) {
+            this._username = value;
+        }
+    }
+
+    const u = new User('mohit');
+    console.log(u.username);
+</script>
+</html>
