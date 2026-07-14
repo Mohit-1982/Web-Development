@@ -1,9 +1,0 @@
-@import "tailwindcss";
-
-.btn {
-    @apply bg-indigo-600 w-25 h-25 md:w-30 md:h-30 m-2 rounded-2xl shadow-md text-5xl md:text-7xl font-semibold;
-}
-
-.play {
-    @apply scale-120 font-bold border-4 transition-transform;
-}
